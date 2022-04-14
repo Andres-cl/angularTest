@@ -1,0 +1,130 @@
+ .container{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+
+    .login-modal{
+      align-self: center;
+      width: calc(100vw / 4);
+      background: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      padding: 2rem;
+
+      .login-modal-header {
+        display: contents;
+
+        img{
+          object-fit: contain;
+        }
+
+        .title{
+          margin-top: 20px;
+          font-size: 1.3rem;
+          text-align: center;
+        }
+      }
+
+      .form{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+
+        .input{
+          background-repeat: no-repeat;
+          background-position: 4px top;
+          background-size: 20px;
+          display: flex;
+          align-items: center;
+          padding-left: 28px;
+          height: 30px;
+          border-bottom: 1px solid darkgray;
+          margin-top: 20px;
+          padding-bottom: 10px;
+          &:hover {
+            border-color: #0080ff;
+          }
+
+          input{
+            border: none;
+            width: 100%;
+            font-size: 0.9em;
+            &:focus {
+              outline: none;
+            }
+          }
+        }
+
+        .input-mail{
+          background-image: url('/assets/images/user.svg');
+        }
+
+        .input-pass{
+          background-image: url('/assets/images/pass.svg');
+        }
+      }
+
+      .remember-me{
+        margin-top: 20px;
+        margin-bottom: 20px;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .btn-aceptar{
+        border-radius: 25px;
+        font-size: 1.2rem;
+        border: 2px solid #0080ff;
+        padding: 5px 45px 5px 45px;
+        background-color: white;
+        cursor: pointer;
+        width: fit-content;
+        align-self: center;
+
+        &:hover{
+          background-color: #0080ff;
+          color: white;
+          border-color: none;
+          transition: all .3s ease-in;
+        }
+      }
+    }
+  }
+
+ @media (max-width: 960px) {
+   .container .login-modal{
+     padding: 0 !important;
+     background: transparent !important;
+     width: calc(100vw / 1.2) !important;
+
+     .form{
+       background: white;
+       margin-top: 40px;
+       .input {
+         margin: 1rem;
+       }
+       .remember-me {
+         padding: 1rem;
+         margin: 0;
+       }
+     }
+
+     .title{
+       display: none;
+     }
+
+     .btn-aceptar{
+       width: 100% !important;
+       background: #0080ff !important;
+       border-radius: 0 !important;
+       border: none !important;
+       color: white !important;
+       padding-top: 10px !important;
+       padding-bottom: 10px !important;
+     }
+   }
+ }
+
